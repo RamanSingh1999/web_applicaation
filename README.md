@@ -1,4 +1,1 @@
-tools Required
-git 
-jenkins
-ec2 instance
+This is a basic Tic-Tac-Toe game that can be played by two players in turns. The game is built using HTML, CSS, and JavaScript and runs entirely in the browser. It allows players to click on cells on the game board to place their mark ('X' or 'O'). The game checks for winning conditions and displays a message when a player wins or if the game ends in a tie.
