@@ -1,11 +1,18 @@
-# Use the Nginx image to serve the web application
-FROM nginx:alpine
+# Use an official Node.js runtime as a parent image
+FROM node:14
 
-# Copy the static files to the Nginx web root
-COPY . /usr/share/nginx/html
+# Set the working directory
+WORKDIR /usr/src/app
 
-# Expose port 80 for the web server
+# Copy package.json and install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the application port
 EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Command to run the application
+CMD ["node", "app.js"]
