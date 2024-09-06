@@ -1,0 +1,15 @@
+{
+    "name": "tic-tac-toe-web-app",
+    "version": "1.0.0",
+    "description": "A simple Tic-Tac-Toe game web application",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "author": "Raman Singh",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
+  
