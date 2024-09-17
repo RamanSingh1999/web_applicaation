@@ -1,13 +1,14 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
-// Serve static files (HTML, CSS, JavaScript)
-app.use(express.static('public'));  // Assuming static files are in a 'public' folder
+// Serve static files from 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Basic route to serve the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');  // Adjust this if index.html is in a different folder
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start the server
