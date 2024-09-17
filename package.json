@@ -6,6 +6,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.18.1"  // Update to a known working version
+    "express": "^4.17.1" 
   }
 }
